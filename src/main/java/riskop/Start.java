@@ -22,17 +22,5 @@ public class Start implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-        ErrorCodeWithMessage errorCodeWithMessage = new ErrorCodeWithMessage(42, "Everything and nothing else");
-        Exception myException = new Exception();
-        String json1 = objectMapper.writeValueAsString(myException);
-        logger.info("", myException);
-        //logger.info("json1: " + json1);
-        Throwable t = objectMapper.readValue(json1, Throwable.class);
-        logger.info("t: " + t);
-        logger.info("-----------------------------------------------");
-        logger.info("", t);
-        String json2 = objectMapper.writeValueAsString(t);
-        //logger.info("json2: " + json2);
     }
 }
