@@ -13,14 +13,14 @@ public class MyTest {
     ToFromJson toFromJson;
 
     @Test
-    void TestNPE() {
-        java.lang.NullPointerException npe = new java.lang.NullPointerException();
+    void TestIAE() {
+        java.lang.IllegalArgumentException e1 = new java.lang.IllegalArgumentException();
         try {
-            toFromJson.toFromJson(npe);
+            toFromJson.toFromJson(e1);
         }
-        catch (java.lang.NullPointerException npe2) {
+        catch (java.lang.IllegalArgumentException e2) {
             // okay, expected
-            Assertions.assertEquals(npe.getMessage(), npe2.getMessage());
+            Assertions.assertEquals(e1.getMessage(), e2.getMessage());
         }
         catch (Throwable t) {
             throw new RuntimeException(t);
@@ -28,14 +28,14 @@ public class MyTest {
     }
 
     @Test
-    void TestMyNPE() {
-        NullPointerException npe = new NullPointerException();
+    void TestMyIAE() {
+        IllegalArgumentException e1 = new IllegalArgumentException();
         try {
-            toFromJson.toFromJson(npe);
+            toFromJson.toFromJson(e1);
         }
-        catch (NullPointerException npe2) {
+        catch (IllegalArgumentException e2) {
             // okay, expected
-            Assertions.assertEquals(npe.getMessage(), npe2.getMessage());
+            Assertions.assertEquals(e1.getMessage(), e2.getMessage());
         }
         catch (Throwable t) {
             throw new RuntimeException(t);
