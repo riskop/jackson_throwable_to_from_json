@@ -6,12 +6,12 @@ package riskop;
  *
  * @since   1.0
  */
-public class IllegalArgumentException extends RuntimeException {
+public class MyIllegalArgumentException extends RuntimeException {
     /**
      * Constructs an {@code IllegalArgumentException} with no
      * detail message.
      */
-    public IllegalArgumentException() {
+    public MyIllegalArgumentException() {
         super();
     }
 
@@ -21,7 +21,7 @@ public class IllegalArgumentException extends RuntimeException {
      *
      * @param   s   the detail message.
      */
-    public IllegalArgumentException(String s) {
+    public MyIllegalArgumentException(String s) {
         super(s);
     }
 
@@ -41,7 +41,7 @@ public class IllegalArgumentException extends RuntimeException {
      *         unknown.)
      * @since 1.5
      */
-    public IllegalArgumentException(String message, Throwable cause) {
+    public MyIllegalArgumentException(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -59,7 +59,7 @@ public class IllegalArgumentException extends RuntimeException {
      *         unknown.)
      * @since  1.5
      */
-    public IllegalArgumentException(Throwable cause) {
+    public MyIllegalArgumentException(Throwable cause) {
         super(cause);
     }
 

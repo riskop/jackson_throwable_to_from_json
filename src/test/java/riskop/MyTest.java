@@ -1,7 +1,6 @@
 package riskop;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,11 +13,11 @@ public class MyTest {
 
     @Test
     void TestIAE() {
-        java.lang.IllegalArgumentException e1 = new java.lang.IllegalArgumentException();
+        IllegalArgumentException e1 = new IllegalArgumentException();
         try {
             toFromJson.toFromJson(e1);
         }
-        catch (java.lang.IllegalArgumentException e2) {
+        catch (IllegalArgumentException e2) {
             // okay, expected
             Assertions.assertEquals(e1.getMessage(), e2.getMessage());
         }
@@ -29,11 +28,11 @@ public class MyTest {
 
     @Test
     void TestMyIAE() {
-        IllegalArgumentException e1 = new IllegalArgumentException();
+        MyIllegalArgumentException e1 = new MyIllegalArgumentException();
         try {
             toFromJson.toFromJson(e1);
         }
-        catch (IllegalArgumentException e2) {
+        catch (MyIllegalArgumentException e2) {
             // okay, expected
             Assertions.assertEquals(e1.getMessage(), e2.getMessage());
         }
